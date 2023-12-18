@@ -38,16 +38,16 @@ export async function fetchTodos() {
 
   querySnapshot.forEach((doc) => {
     console.log(doc.id, " => ", doc.data());
+    // const create_at = doc.data() && doc.data().created_at && doc.data().created_at.toDate();
     const aTodo = {
       id: doc.id,
       title: doc.data()["title"],
       is_done: doc.data()["is_done"],
-      create_at: doc.data()["created_at"],
-      // .toDate().toLocaleTimeString('ko'),
+      created_at: doc.data()["created_at"].toDate()
     };
     fetchedTodos.push(aTodo);
   });
-  return fetchTodos;
+  return fetchedTodos;
 }
 
 // 할일 추가
