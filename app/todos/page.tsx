@@ -5,7 +5,6 @@ async function fetchTodosApiCall(){
 	console.log("fetchTodosApiCall Called");
 	const res = await fetch(`${process.env.BASE_URL}/api/todos`);
 	return res.json(); 
-
 }
 
 export default async function TodosPage() {
