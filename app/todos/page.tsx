@@ -11,6 +11,7 @@ export default async function TodosPage() {
 	
 	const response = await fetchTodosApiCall();
 	console.log("API Response:", response);
+	
 	return (
 		<div className="flex flex-col space-y-10">
 			<h1 className={title()}>Todos</h1>
