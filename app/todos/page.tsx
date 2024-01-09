@@ -8,6 +8,7 @@ async function fetchTodosApiCall(){
 }
 
 export default async function TodosPage() {
+	
 	const response = await fetchTodosApiCall();
 	console.log("API Response:", response);
 	
